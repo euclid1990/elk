@@ -3,6 +3,20 @@
 Run the latest version of the ELK (Elasticsearch, Logstash, Kibana) stack with Docker and Docker Compose.
 All docker images is provided at [here](https://www.docker.elastic.co/).
 
+## Setup
+
+```sh
+$ git clone git@github.com:euclid1990/elk.git /path_to_project
+$ cd /path_to_project
+$ docker-compose up
+```
+
+**Note**: If you using Ubuntu/Linux, you may need to change the permissions of folder:
+
+```sh
+sudo chmod -R 777 /path_to_project/data
+```
+
 ## Accessing Kibana
 Kibana is a web application that you access through port 5601. Go to url: http://localhost:5601 with login information:
 
