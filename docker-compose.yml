@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.0.1
+    environment:
+      ELASTIC_USERNAME: "elastic"
+      ELASTIC_PASSWORD: "MyPwd123"
+    volumes:
+      - ./data/elasticsearch:/usr/share/elasticsearch/data
+      - ./config/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+    expose:
+      - "9200"
+      - "9300"
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:6.0.1
+    volumes:
+      - ./config/kibana/kibana.yml:/usr/share/kibana/config/kibana.yml:ro
+      - ./data/kibana/log:/var/log:rw
+    links:
+      - elasticsearch
+    ports:
+      - 5601:5601
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:6.0.1
+    volumes:
+      - ./config/logstash/logstash.conf/:/usr/share/logstash/pipeline/logstash.conf
+    links:
+      - elasticsearch

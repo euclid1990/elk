@@ -1,0 +1,7 @@
+server.name: kibana
+server.host: "0"
+elasticsearch.url: http://elasticsearch:9200
+elasticsearch.username: elastic
+elasticsearch.password: MyPwd123
+xpack.monitoring.ui.container.elasticsearch.enabled: true
+# logging.dest: /var/log/kibana.log

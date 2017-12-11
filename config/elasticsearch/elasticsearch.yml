@@ -1,0 +1,7 @@
+network.host: 0.0.0.0
+network.bind_host: 0.0.0.0
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+cluster.name: ElasticsearchCluster
+node.name: ElasticsearchNode
+discovery.type: single-node
