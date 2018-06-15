@@ -5,3 +5,4 @@ http.cors.allow-origin: "*"
 cluster.name: ElasticsearchCluster
 node.name: ElasticsearchNode
 discovery.type: single-node
+path.repo: ["/usr/share/elasticsearch/backups"]

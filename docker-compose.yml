@@ -9,7 +9,8 @@ services:
       ELASTIC_USERNAME: "elastic"
       ELASTIC_PASSWORD: "MyPwd123"
     volumes:
-      - ./data/elasticsearch:/usr/share/elasticsearch/data
+      - ./data/elasticsearch/data:/usr/share/elasticsearch/data
+      - ./data/elasticsearch/backups:/usr/share/elasticsearch/backups
       - ./config/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
     expose:
       - "9200"
