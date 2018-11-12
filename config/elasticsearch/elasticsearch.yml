@@ -6,3 +6,9 @@ cluster.name: ElasticsearchCluster
 node.name: ElasticsearchNode
 discovery.type: single-node
 path.repo: ["/usr/share/elasticsearch/backups"]
+xpack.license.self_generated.type: trial
+xpack.monitoring.enabled: true
+xpack.security.enabled: true
+xpack.watcher.enabled: false
+xpack.ml.enabled: false
+xpack.monitoring.collection.enabled: true
